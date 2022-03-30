@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -11,11 +12,18 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  .p_c{
+    position: relative;
+    -webkit-animation: moving infinite 10s linear;
+    animation: moving infinite 10s linear  ;
+  }
 }
-
+.p_c {
+  font-family:'Courier New', Courier, monospace; 
+}
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,5 +42,13 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes moving {
+  from{
+    transform: translate(-670px);
+  }  
+  to{
+    transform: translate(670px);
   }
 }
