@@ -12,17 +12,28 @@ export class Counter extends Component {
     }
 
     incr(){
-        this.setState({
+        // this.setState({
             
-            Count:  this.state.Count +1 })
+        //     Count:  this.state.Count +1 })
+
+        this.setState(prevState => ({
+          Count: prevState.Count + 1
+        }))
             }
+    incr5(){
+      let i = 0;
+      while(i<10){
+        this.incr();
+        i++;
+      }
+    }
 
     render() {
     return (
-      <div> <h1>{this.state.Count}</h1>
+      <div> <h1 >{this.state.Count}</h1>
     
           <button onClick={() => {
-              this.incr()
+              this.incr5()
           }}>Count</button>
       </div>
     )
